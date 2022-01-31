@@ -1,0 +1,75 @@
+<hill version="DSJ4-1.7.0" author="DASKER">
+    <location latitude="41.80085" longitude="128.35432" orientation="245" timezone="9" altitude="950" />
+    <weather pollution="1.0" firstsnow="300" lastsnow="90" maxsnow="1.0" precipitationprobability="0.1" fogprobability="0.1" />
+    <inrun>
+        <profile e="72.0" es="14" t="6.33" gamma="34" alpha="10.5" r1="65" s="2.5" b1="3.0" z0="0" l="0" f="0.0" />
+        <guardrail z1="-1.0" z2="1.0" x="20" />
+        <startgate default="4" max="14" step="0.75" wind="1.20" z1="-1.5" z2="1.0" pz1="-1.4" pz2="0.9" t1="Textures\wood1.png" m1="Materials\wood.xml" 
+		c1="0x948b90" t2="Textures\wood1.png" m2="Materials\wood.xml" 
+		c2="0x948b90" t3="Textures\wood1.png" m3="Materials\wood.xml" c3="7FFFD4" />
+		<gatenumbers z="-1" y="-0.0" c1="0xffdddd00" c2="0xff37aaff" size="0.1"/>
+        <startbanner z="0" text="SAMIJIYON" textsize="0.1" />
+        <frame bh="1.0" bdrz="0" bdlz="-0" snow="false" t="Textures\snow.png" m="Materials\snow.xml" c0="0x948b90" c1="0x948b90" c2="0x948b90" c3="0x948b90" />
+        <flag x="3.0" z="-2.9" hf="2.9" pf="1.5" hp="9.0" rb="0.07" rt="0.05" tf="Textures\flag-prk.png" mf="Materials\flag.xml" tp="Textures\wood1.png" mp="Materials\material1.xml" cp="0xffffff" />
+        <twigs lz="1.20" rz="-1.20" />
+		<track type="default" snow="true" />
+    </inrun>
+    <dhill>
+        <profile alpha="6.10" h="44.35" n="77.80" l1="20" l2="15" a="80" beta-p="35.8" beta="35.8" beta-l="25.8" rl="306.15" 
+		r2="75" b0="8" bk="18" ba="18" hr="5" nr="40" ar="30" k="90" hs="100" x0="5" />
+        <fence h="0.5" t="Textures\fenceback.png" m="Materials\material1.xml" c="0xffffff" />
+        <judgetower d="46.74" q="18" h="+4" t1="Textures\wood3.png" m1="Materials\wood.xml" c1="0x450d0a" t2="Textures\wood3.png" m2="Materials\wood.xml" c2="0x959183" />
+        <windflags h="3" l="4.1" d="0.6" t="Textures\rust1.png" m="Materials\metal.xml" c="0x999999" />
+        <measurers c1="176b0b" c2="0xeeee00" /> 
+        <label summer-d="45" winter-d="45" text="SAMIJIYON" textsize="2.5" />
+        <plastic c="0x41a958" />
+        <lines summer-min="60" summer-max="105" winter-min="60" winter-max="105" />
+        <numbers min="60" max="105" />
+		<lights x0="-5" step="15" size="2" h="15" d="10" r="0.235" g="0.190" b="0.234" attn="0.00015" range="35" t="Textures\rust1.png" m="Materials\metal.xml" c="0xe59242" />
+        <lights x0="-5" step="15" size="2" h="15" d="20" r="0.235" g="0.190" b="0.234" attn="0.00015" range="47" t="Textures\rust1.png" m="Materials\metal.xml" c="0xe59242" side="right"/>   
+    </dhill>
+
+    <profile id="inrun-left" side="left" maxstep="1000">
+        <start x="-10" y="1.0" refx="inrun" />
+        <line x="0" y="1.0" refx="dhill" />
+    </profile>
+
+    <profile id="inrun-right" side="right" maxstep="1000">
+        <start x="-10" y="-1.0" refx="inrun" />
+        <line x="0" y="-1.0" refx="dhill" />
+    </profile>
+
+	<profile id="inrun-terrain">
+        <start x="-90" y="-3"/>
+        <line x="-80" y="2.38"/>
+        <line x="-1.0" y="2.38"/>
+        <line x="-0.9" y="0"/>
+    </profile>
+
+     <terrain>
+        <profile in="1" y0="-50.0" sd="150" fd="350" sc="0.07" sm="10.47" rs="1820" c1="0x544727" c2="0x4c6137" tsc="0.008" tsm="0.4" />
+        <trees count="30000" minheight="10" maxheight="50" fractalthreshold="0.4" maxaltitude="4000" normalaltitude="600" seed="74" />
+        <blocks count="1000" minsaturation="0.0" maxsaturation="0.1" minfloors="1" maxfloors="4" maxaltitude="600" normalaltitude="120" fractalthreshold="0.3" seed="200" />
+        <houses count="1000" minsaturation="0.0" maxsaturation="0.2" minfloors="1" maxfloors="3" maxaltitude="600" normalaltitude="120" fractalthreshold="0.5" seed="100" />
+        <audience count="50" d="25" x0="0" seed="55" />
+    </terrain>
+	
+	<railing x1="0.58" x2="0.7" h="1.0" w="4.0" t="Textures\flag-prk.png" m="Materials\material1.xml" c="0xffffff" y="-1.75" z="0.0" refx1="dhill" refx2="dhill"/>
+<!--schody gora-->
+<pillar zbias="2" step="0.375" count="32" refx1="inrun" refx2="inrun" x1="0.0" x2="0.375" rz="0.9" lz="2.9" trefy="inrun-top" brefy="inrun-top" ty1="0.0" by1="-0.25" ty2="0.25"  by2="0.25" t="Textures\wood4.png" m="Materials\wood.xml" c="0x948b90"/>
+<pillar zbias="4" step="0.375" count="32" refx1="inrun" refx2="inrun" x1="0.25" x2="0.33" rz="0.92" lz="2.88" trefy="inrun-top" brefy="inrun-top" ty="0.15" by="-0.25" t="Textures\wood4.png" m="Materials\wood.xml" c="0x948b90"/>
+
+<pillar zbias="4" step="0.375" count="32" refx1="inrun" refx2="inrun" x1="0.0" x2="0.375" rz="-2.9" lz="-0.9" trefy="inrun-top" brefy="inrun-top" ty1="0.0" by1="-0.25" ty2="0.25"  by2="0.15" t="Textures\wood4.png" m="Materials\wood.xml" c="0x948b90"/>
+<pillar zbias="4" step="0.375" count="32" refx1="inrun" refx2="inrun" x1="0.25" x2="0.33" rz="-2.88" lz="-0.92" trefy="inrun-top" brefy="inrun-top" ty="0.15" by="-0.25" t="Textures\wood4.png" m="Materials\wood.xml" c="0x948b90"/>
+	
+<stairs refx="inrun" refy="inrun-top" refz="inrun-right" y="-0.0" x1="0.0" x2="12" lz="0.05" rz="-0.05" s="0.375" t1="Textures\wood4.png" m1="Materials\wood.xml" c1="0x948b90" t2="Textures\wood4.png" m2="Materials\wood.xml" c2="0x948b90"/>
+
+
+
+<pillar zbias="4" refx="dhill"
+	x1="203.15" x2="203.35"
+	lz="0.1" rz="-0.1" ty="1.52" by="-0.2"
+	top="true" bottom="true"  
+	trefy="dhill-top" brefy="dhill-top"
+	t="Textures\wood4.png" m="Materials\wood.xml" c="0x948b90"/>
+</hill>
